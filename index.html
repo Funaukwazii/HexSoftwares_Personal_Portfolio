@@ -18,13 +18,26 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            color: #fff;
-            scroll-behavior: smooth;
-        }
+        @keyframes rainbowBG {
+    0% { background: #ff0000; }
+    14% { background: #ff7f00; }
+    28% { background: #ffff00; }
+    42% { background: #00ff00; }
+    57% { background: #0000ff; }
+    71% { background: #4b0082; }
+    85% { background: #9400d3; }
+    100% { background: #ff0000; }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: rainbowBG 10s infinite linear;
+    color: #fff;
+    scroll-behavior: smooth;
+}
 
         /* Sticky Navigation Menu */
         nav {
